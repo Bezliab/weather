@@ -1,0 +1,40 @@
+const WMO = {
+  0:  { label: 'Clear Sky',       icon: '☀️', sky: 'clear' },
+  1:  { label: 'Mainly Clear',    icon: '🌤', sky: 'clear' },
+  2:  { label: 'Partly Cloudy',   icon: '⛅', sky: 'clouds' },
+  3:  { label: 'Overcast',        icon: '☁️', sky: 'clouds' },
+  45: { label: 'Foggy',           icon: '🌫', sky: 'fog' },
+  48: { label: 'Icy Fog',         icon: '🌫', sky: 'fog' },
+  51: { label: 'Light Drizzle',   icon: '🌦', sky: 'rain' },
+  53: { label: 'Drizzle',         icon: '🌧', sky: 'rain' },
+  55: { label: 'Dense Drizzle',   icon: '🌧', sky: 'rain' },
+  61: { label: 'Light Rain',      icon: '🌧', sky: 'rain' },
+  63: { label: 'Rain',            icon: '🌧', sky: 'rain' },
+  65: { label: 'Heavy Rain',      icon: '🌧', sky: 'rain' },
+  66: { label: 'Freezing Rain',   icon: '🌨', sky: 'snow' },
+  67: { label: 'Freezing Rain',   icon: '🌨', sky: 'snow' },
+  71: { label: 'Light Snow',      icon: '🌨', sky: 'snow' },
+  73: { label: 'Snow',            icon: '❄️', sky: 'snow' },
+  75: { label: 'Heavy Snow',      icon: '❄️', sky: 'snow' },
+  77: { label: 'Snow Grains',     icon: '🌨', sky: 'snow' },
+  80: { label: 'Rain Showers',    icon: '🌦', sky: 'rain' },
+  81: { label: 'Rain Showers',    icon: '🌦', sky: 'rain' },
+  82: { label: 'Violent Showers', icon: '⛈', sky: 'thunder' },
+  85: { label: 'Snow Showers',    icon: '🌨', sky: 'snow' },
+  86: { label: 'Heavy Snow',      icon: '❄️', sky: 'snow' },
+  95: { label: 'Thunderstorm',    icon: '⛈', sky: 'thunder' },
+  96: { label: 'Thunderstorm',    icon: '⛈', sky: 'thunder' },
+  99: { label: 'Thunderstorm',    icon: '⛈', sky: 'thunder' },
+};
+
+const SKY_DESCRIPTIONS = {
+  clear:   'Crystal-clear atmosphere — excellent visibility and calm conditions.',
+  clouds:  'Cloud cover softens the sky — a contemplative, diffused light.',
+  rain:    'Precipitation in the air — the city wrapped in a silver curtain.',
+  snow:    'Snow transforms the landscape into hushed, white silence.',
+  thunder: 'Electrical storms charge the atmosphere with raw energy.',
+  fog:     'Low visibility — the world dissolves into soft-edged mystery.',
+  wind:    'Strong winds reshape the skyline with invisible force.',
+};
+
+const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];

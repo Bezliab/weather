@@ -1,0 +1,24 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg1: #0d1117;
+  --bg2: #161b22;
+  --accent: #58a6ff;
+  --text: #e6edf3;
+  --muted: rgba(230,237,243,0.5);
+  --card: rgba(22,27,34,0.72);
+  --border: rgba(255,255,255,0.08);
+  --transition: 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+
+html, body {
+  height: 100%;
+  font-family: 'DM Mono', monospace;
+  overflow-x: hidden;
+  background: var(--bg1);
+  color: var(--text);
+}

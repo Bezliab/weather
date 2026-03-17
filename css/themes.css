@@ -1,0 +1,52 @@
+.sky-clear {
+  background: linear-gradient(160deg,#0a0e27 0%,#1a2a6c 40%,#b21f1f 75%,#fdbb2d 100%);
+}
+
+.sky-clear-day {
+  background: linear-gradient(175deg,#0077b6 0%,#00b4d8 35%,#90e0ef 70%,#caf0f8 100%);
+}
+
+.sky-clouds {
+  background: linear-gradient(160deg,#2c3e50 0%,#3d5a6e 40%,#6e8fa8 100%);
+}
+
+.sky-rain {
+  background: linear-gradient(160deg,#1a1a2e 0%,#2d3561 40%,#374151 100%);
+}
+
+.sky-snow {
+  background: linear-gradient(160deg,#c9d6df 0%,#e2ebf0 50%,#ffffff 100%);
+}
+
+.sky-thunder {
+  background: linear-gradient(160deg,#0d0d0d 0%,#1a1a1a 35%,#2d1b69 65%,#0d0d0d 100%);
+}
+
+.sky-fog {
+  background: linear-gradient(160deg,#b8c6db 0%,#d0dde6 50%,#e8eff5 100%);
+}
+
+.sky-wind {
+  background: linear-gradient(160deg,#134e5e 0%,#71b280 100%);
+}
+
+body.sky-snow .city-name,
+body.sky-snow .temp-main,
+body.sky-snow .condition-label,
+body.sky-snow .stat-value,
+body.sky-fog .city-name,
+body.sky-fog .temp-main,
+body.sky-fog .condition-label,
+body.sky-fog .stat-value {
+  color: #1a2a3a;
+}
+
+body.sky-snow header h1,
+body.sky-fog header h1 {
+  color: #1a2a3a;
+}
+
+body.sky-snow header p,
+body.sky-fog header p {
+  color: rgba(26,42,58,0.55);
+}

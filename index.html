@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atmosphère — Weather</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/themes.css">
+</head>
+<body>
+  <div id="scene">
+    <canvas id="particles"></canvas>
+  </div>
+
+  <div id="app">
+    <header>
+      <h1>Atmosphère</h1>
+      <p>Live weather intelligence</p>
+    </header>
+
+    <div class="search-wrap">
+      <input id="city-input" type="text" placeholder="Enter a city…" autocomplete="off" spellcheck="false"/>
+      <button id="search-btn">Search</button>
+    </div>
+
+    <p id="error-msg"></p>
+
+    <div id="loader">
+      <div class="spinner"></div>
+      <p>Fetching atmosphere…</p>
+    </div>
+
+    <div id="weather-card">
+      <div class="card-hero">
+        <div>
+          <div class="city-name" id="wc-city">—</div>
+          <div class="country" id="wc-country">—</div>
+          <div class="local-time" id="wc-time">—</div>
+        </div>
+        <div class="temp-block">
+          <div class="weather-icon" id="wc-icon">🌤</div>
+          <div class="temp-main"><span id="wc-temp">—</span><span class="temp-unit">°</span></div>
+          <div class="feels-like" id="wc-feels">—</div>
+          <div class="condition-label" id="wc-cond">—</div>
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-label">Humidity</div>
+          <div class="stat-value"><span id="wc-hum">—</span><span class="stat-unit">%</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Wind</div>
+          <div class="stat-value"><span id="wc-wind">—</span><span class="stat-unit"> km/h</span></div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">Visibility</div>
+          <div class="stat-value"><span id="wc-vis">—</span><span class="stat-unit"> km</span></div>
+        </div>
+      </div>
+
+      <div class="forecast-wrap">
+        <div class="forecast-title">5-day outlook</div>
+        <div class="forecast-strip" id="forecast-strip"></div>
+      </div>
+
+      <div class="condition-strip">
+        <div class="cond-dot" id="cond-dot"></div>
+        <div class="cond-text" id="cond-text">Search for a city to begin</div>
+      </div>
+    </div>
+
+    <p class="attr">Powered by Open-Meteo · Geocoding by Open-Meteo</p>
+  </div>
+
+  <script src="js/weather-map.js"></script>
+  <script src="js/helpers.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/weather-api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

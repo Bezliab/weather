@@ -1,0 +1,147 @@
+#scene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  transition: background var(--transition), opacity var(--transition);
+}
+
+#scene canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#particles {
+  pointer-events: none;
+}
+
+#app {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.8rem;
+  animation: fadeDown 0.9s ease both;
+}
+
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 0 2px 32px rgba(0,0,0,0.4);
+}
+
+header p {
+  font-size: 0.68rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.search-wrap {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 520px;
+  margin-bottom: 3rem;
+  animation: fadeDown 0.9s 0.15s ease both;
+}
+
+#weather-card {
+  display: none;
+  width: 100%;
+  max-width: 680px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  backdrop-filter: blur(24px);
+  overflow: hidden;
+  animation: riseUp 0.7s cubic-bezier(0.34,1.26,0.64,1) both;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+}
+
+.card-hero {
+  padding: 2.4rem 2.6rem 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid var(--border);
+}
+
+.temp-block {
+  text-align: right;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid var(--border);
+}
+
+.forecast-wrap {
+  padding: 1.6rem 2.4rem;
+}
+
+.forecast-strip {
+  display: flex;
+  gap: 0;
+}
+
+.condition-strip {
+  padding: 1rem 2.4rem 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.attr {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.22);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .card-hero {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .temp-block {
+    text-align: left;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat:nth-child(3) {
+    border-right: 1px solid var(--border);
+  }
+
+  .forecast-strip {
+    overflow-x: auto;
+  }
+
+  .fc-item {
+    min-width: 64px;
+  }
+}
